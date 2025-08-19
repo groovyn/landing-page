@@ -179,23 +179,29 @@ export default function GroovynLanding() {
           
           {/* Mobile App Screenshots with 3D Effects */}
           <div className="relative max-w-6xl mx-auto perspective-1000">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-center">
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 sm:p-8 h-64 sm:h-80 md:h-96 flex items-center justify-center shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-3xl group perspective-child">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-center">
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 sm:p-8 h-[180px] w-[180px] sm:h-64 sm:w-auto flex items-center justify-center shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-3xl group perspective-child mx-auto">
                 <div className="text-center group-hover:scale-110 transition-transform duration-500">
                   <ShoppingBag className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
                   <p className="text-gray-600 font-medium group-hover:text-black transition-colors duration-300">Browse & Shop</p>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl p-6 sm:p-8 h-64 sm:h-80 md:h-96 flex items-center justify-center shadow-2xl transform md:scale-110 transition-all duration-700 hover:scale-125 hover:rotate-y-12 hover:shadow-3xl group perspective-child relative z-10">
+              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl p-6 sm:p-8 h-[180px] w-[180px] sm:h-64 sm:w-auto flex items-center justify-center shadow-2xl transform md:scale-110 transition-all duration-700 hover:scale-125 hover:rotate-y-12 hover:shadow-3xl group perspective-child relative z-10 mx-auto">
                 <div className="text-center group-hover:scale-110 transition-transform duration-500">
                   <Scissors className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
                   <p className="text-gray-700 font-semibold group-hover:text-black transition-colors duration-300">Custom Tailoring</p>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 sm:p-8 h-64 sm:h-80 md:h-96 flex items-center justify-center shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-3xl group perspective-child">
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 sm:p-8 h-[180px] w-[180px] sm:h-64 sm:w-auto flex items-center justify-center shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-3xl group perspective-child mx-auto">
                 <div className="text-center group-hover:scale-110 transition-transform duration-500">
                   <Shirt className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
                   <p className="text-gray-600 font-medium group-hover:text-black transition-colors duration-300">Rent & Try</p>
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl p-6 sm:p-8 h-[180px] w-[180px] sm:h-64 sm:w-auto flex items-center justify-center shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-3xl group perspective-child mx-auto">
+                <div className="text-center group-hover:scale-110 transition-transform duration-500">
+                  <Palette className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
+                  <p className="text-gray-600 font-medium group-hover:text-black transition-colors duration-300">Fabric</p>
                 </div>
               </div>
             </div>
