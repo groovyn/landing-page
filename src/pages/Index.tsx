@@ -234,7 +234,7 @@ export default function GroovynLanding() {
                   animationDelay: `${index * 150}ms`
                 }}
               >
-                <CardContent className="p-8 sm:p-10 text-center relative z-10">
+                <CardContent className="p-4 sm:p-8 text-center relative z-10 min-h-0 h-auto max-h-[320px] sm:max-h-none flex flex-col justify-center">
                   <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-all duration-500 group-hover:bg-black group-hover:scale-110 group-hover:rotate-12 shadow-lg">
                     {index === 0 && <Scissors className="h-8 w-8 sm:h-10 sm:w-10 text-gray-600 transition-all duration-500 group-hover:text-red-600 group-hover:scale-110" />}
                     {index === 1 && <Store className="h-8 w-8 sm:h-10 sm:w-10 text-gray-600 transition-all duration-500 group-hover:text-blue-600 group-hover:scale-110" />}
@@ -289,7 +289,7 @@ export default function GroovynLanding() {
                   animationDelay: `${index * 200}ms`
                 }}
               >
-                <CardContent className="p-8 sm:p-10 text-center relative z-10">
+                <CardContent className="p-4 sm:p-8 text-center relative z-10 min-h-0 h-auto max-h-[320px] sm:max-h-none flex flex-col justify-center">
                   <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-all duration-500 group-hover:bg-black group-hover:scale-110 group-hover:rotate-12 shadow-lg">
                     <service.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 transition-transform duration-300 group-hover:scale-110 group-hover:text-indigo-600" />
                   </div>
