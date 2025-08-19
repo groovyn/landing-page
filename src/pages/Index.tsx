@@ -82,6 +82,16 @@ export default function GroovynLanding() {
       icon: CheckCircle,
       title: "Community & Support",
       description: "Connect with fashion enthusiasts and get 24/7 help from our support team."
+    },
+    {
+      icon: Store,
+      title: "Visit Store",
+      description: "Find and visit partner stores near you for a personalized experience."
+    },
+    {
+      icon: ArrowRight,
+      title: "Pay via App",
+      description: "Get extra discounts when you pay your bill directly from our app."
     }
   ];
 
@@ -257,14 +267,7 @@ export default function GroovynLanding() {
                   <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4 group-hover:text-black transition-colors duration-300">{step.title}</h3>
                   <div className="space-y-2">
                     <p className="text-gray-800 text-sm sm:text-base leading-relaxed group-hover:text-black transition-colors duration-300">{step.description}</p>
-                    {(step.title === 'Book a Tailor' || step.title === 'Shop Boutiques') && (
-                      <div className="bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm text-gray-800 font-semibold text-xs sm:text-sm mt-3 w-full sm:w-auto">
-                        <ul className="list-disc pl-4">
-                          <li>Visit Store Available</li>
-                          <li>Extra discount when you pay via our app</li>
-                        </ul>
-                      </div>
-                    )}
+                    {/* Removed Visit Store and Pay via app info for mobile view */}
                   </div>
                 </CardContent>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-500 transform -skew-x-12 translate-x-full group-hover:translate-x-[-100%]"></div>
@@ -272,36 +275,51 @@ export default function GroovynLanding() {
             ))}
           </div>
         </div>
-      </section>
+      {
+        icon: Users,
+        title: "Unified Platform",
+        description: "Manage all your custom clothing needs—tailoring, shopping, rentals, and fabrics—in one seamless app."
+      },
+      {
+        icon: Star,
+        title: "Verified Tailors & Boutiques",
+        description: "Access a curated network of trusted professionals for quality and reliability."
+      },
+      {
+        icon: ArrowRight,
+        title: "Smart Booking & Payments",
+        description: "Schedule visits, book services, and pay securely through Groovyn for a hassle-free experience."
+      },
+      {
+        icon: ShoppingBag,
+        title: "Exclusive Offers & Rewards",
+        description: "Unlock app-only discounts, loyalty rewards, and special deals every time you use Groovyn."
+      },
+      {
+        icon: Shirt,
+        title: "Home Delivery & Trials",
+        description: "Enjoy doorstep delivery and trial options for rentals and purchases."
+      },
+      {
+        icon: CheckCircle,
+        title: "Community & Support",
+        description: "Connect with fashion enthusiasts and get 24/7 help from our support team."
+      }
+    ];
 
-
-      
-
-      {/* Services Section (third, white) */}
-      <section 
-        id="services" 
-        data-animate
-        className={`py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden transition-all duration-1500 ${
-          isVisible['services'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-        }`}
-      >
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 transform transition-all duration-1000 hover:scale-105">Our Services</h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need for your custom clothing journey, all in one platform
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {services.map((service, index) => (
-              <Card 
-                key={index} 
-                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white w-full max-w-xs min-h-[140px] min-w-[140px] h-auto mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
-                style={{
-                  animationDelay: `${index * 200}ms`
-                }}
-              >
-                <CardContent className="p-4 sm:p-8 text-center relative z-10 min-h-0 h-auto max-h-[320px] sm:max-h-none flex flex-col justify-center">
+    // Mobile-only cards for Our Services section
+    const mobileServices = [
+      {
+        icon: Store,
+        title: "Visit Store",
+        description: "Find and visit partner stores near you for a personalized experience."
+      },
+      {
+        icon: ArrowRight,
+        title: "Pay via App",
+        description: "Get extra discounts when you pay your bill directly from our app."
+      }
+    ];
                   <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-all duration-500 group-hover:bg-black group-hover:scale-110 group-hover:rotate-12 shadow-lg">
                     <service.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 transition-transform duration-300 group-hover:scale-110 group-hover:text-indigo-600" />
                   </div>
