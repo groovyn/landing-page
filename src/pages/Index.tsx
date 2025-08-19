@@ -199,7 +199,7 @@ export default function GroovynLanding() {
               }].map((card, idx) => (
                 <div
                   key={card.label}
-                  className={`bg-gradient-to-br ${card.bg} rounded-3xl p-6 h-[260px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto animate-drop-in`}
+                  className={`bg-gradient-to-br ${card.bg} rounded-3xl p-6 h-[260px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto animate-drop-in animate-float`}
                   style={{ animationDelay: `${idx * 0.18}s` }}
                 >
                   <div className="text-center group-hover:scale-110 transition-transform duration-500">
