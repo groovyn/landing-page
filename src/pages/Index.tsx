@@ -234,7 +234,7 @@ export default function GroovynLanding() {
                   animationDelay: `${index * 150}ms`
                 }}
               >
-                <CardContent className="p-4 sm:p-8 text-center relative z-10 min-h-0 h-auto max-h-[320px] sm:max-h-none flex flex-col justify-center">
+                <CardContent className={`p-4 sm:p-8 text-center relative z-10 min-h-0 h-auto ${index < 2 ? 'max-h-[400px] sm:max-h-none' : 'max-h-[320px] sm:max-h-none'} flex flex-col justify-center`}>
                   <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-all duration-500 group-hover:bg-black group-hover:scale-110 group-hover:rotate-12 shadow-lg">
                     {index === 0 && <Scissors className="h-8 w-8 sm:h-10 sm:w-10 text-gray-600 transition-all duration-500 group-hover:text-red-600 group-hover:scale-110" />}
                     {index === 1 && <Store className="h-8 w-8 sm:h-10 sm:w-10 text-gray-600 transition-all duration-500 group-hover:text-blue-600 group-hover:scale-110" />}
@@ -248,9 +248,13 @@ export default function GroovynLanding() {
                   <div className="space-y-2">
                     <p className="text-gray-800 text-sm sm:text-base leading-relaxed group-hover:text-black transition-colors duration-300">{step.description}</p>
                     {(step.title === 'Book a Tailor' || step.title === 'Shop Boutiques') && (
-                      <div className="text-xs sm:text-sm text-gray-800">
-                        <span className="inline-block bg-black/40 border border-white/10 rounded-full px-3 py-1 mr-2 mb-1">Visit Store Available</span>
-                        <span className="inline-block bg-black/40 border border-white/10 rounded-full px-3 py-1 mb-1">Extra discount when you pay via our app</span>
+                      <div className="flex flex-col items-center gap-2 mt-2 sm:gap-1 sm:mt-1">
+                        <span className="inline-block bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white border border-gray-600 rounded-full px-4 py-1 font-semibold text-xs shadow-md tracking-wide sm:bg-gray-100 sm:text-gray-800 sm:border-gray-200 sm:rounded sm:px-2 sm:py-0 sm:font-normal">
+                          <span className="mr-2">🏬</span> Visit Store Available
+                        </span>
+                        <span className="inline-block bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 text-white border border-gray-600 rounded-full px-4 py-1 font-semibold text-xs shadow-md tracking-wide sm:bg-gray-100 sm:text-gray-800 sm:border-gray-200 sm:rounded sm:px-2 sm:py-0 sm:font-normal">
+                          <span className="mr-2">💸</span> Extra discount when you pay via our app
+                        </span>
                       </div>
                     )}
                   </div>
