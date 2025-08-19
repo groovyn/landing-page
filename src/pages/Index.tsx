@@ -248,97 +248,31 @@ export default function GroovynLanding() {
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {workflowSteps.map((step, index) => (
               <Card 
-                key={index} 
-                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white h-[220px] w-[160px] md:h-64 md:w-64 mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
+                key={index}
+                className={`relative bg-white/30 backdrop-blur-lg border-2 border-transparent group hover:border-indigo-400 shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden mx-auto flex flex-col justify-center items-center p-6 mb-6 h-[240px] w-[200px] md:h-72 md:w-72 animate-bounce-in`}
                 style={{
                   animationDelay: `${index * 150}ms`
                 }}
               >
-                <CardContent className={`p-4 sm:p-8 text-center relative z-10 min-h-0 h-auto ${index < 2 ? 'max-h-[400px] sm:max-h-none' : 'max-h-[320px] sm:max-h-none'} flex flex-col justify-center`}>
-                  <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-all duration-500 group-hover:bg-black group-hover:scale-110 group-hover:rotate-12 shadow-lg">
-                    {index === 0 && <Scissors className="h-8 w-8 sm:h-10 sm:w-10 text-gray-600 transition-all duration-500 group-hover:text-red-600 group-hover:scale-110" />}
-                    {index === 1 && <Store className="h-8 w-8 sm:h-10 sm:w-10 text-gray-600 transition-all duration-500 group-hover:text-blue-600 group-hover:scale-110" />}
-                    {index === 2 && <Shirt className="h-8 w-8 sm:h-10 sm:w-10 text-gray-600 transition-all duration-500 group-hover:text-purple-600 group-hover:scale-110" />}
-                    {index === 3 && <Palette className="h-8 w-8 sm:h-10 sm:w-10 text-gray-600 transition-all duration-500 group-hover:text-emerald-600 group-hover:scale-110" />}
-                  </div>
-                  <div className="bg-black text-white rounded-full w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-xs sm:text-sm group-hover:bg-gray-800 transition-all duration-300">
-                    {step.step}
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4 group-hover:text-black transition-colors duration-300">{step.title}</h3>
-                  <div className="space-y-2">
-                    <p className="text-gray-800 text-sm sm:text-base leading-relaxed group-hover:text-black transition-colors duration-300">{step.description}</p>
-                    {/* Removed Visit Store and Pay via app info for mobile view */}
+                <CardContent className="flex flex-col items-center justify-center h-full w-full text-center relative z-10">
+                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-indigo-200/30 via-white/10 to-pink-200/30 rounded-2xl"></div>
+                  <div className="relative z-10 flex flex-col items-center justify-center">
+                    <div className="bg-gradient-to-br from-indigo-400 via-purple-400 to-pink-400 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-lg border-4 border-white/40">
+                      {index === 0 && <Scissors className="h-8 w-8 text-white drop-shadow-lg" />}
+                      {index === 1 && <Store className="h-8 w-8 text-white drop-shadow-lg" />}
+                      {index === 2 && <Shirt className="h-8 w-8 text-white drop-shadow-lg" />}
+                      {index === 3 && <Palette className="h-8 w-8 text-white drop-shadow-lg" />}
+                    </div>
+                    <div className="bg-white/80 text-indigo-700 rounded-full px-4 py-1 mb-3 font-bold text-xs shadow-sm border border-indigo-200">{step.step}</div>
+                    <h3 className="text-xl md:text-2xl font-extrabold mb-2 text-indigo-700 drop-shadow-sm">{step.title}</h3>
+                    <p className="text-gray-900 text-base md:text-lg leading-relaxed font-medium drop-shadow-sm px-2">{step.description}</p>
                   </div>
                 </CardContent>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-500 transform -skew-x-12 translate-x-full group-hover:translate-x-[-100%]"></div>
               </Card>
             ))}
           </div>
-        </div>
-      {
-        icon: Users,
-        title: "Unified Platform",
-        description: "Manage all your custom clothing needs—tailoring, shopping, rentals, and fabrics—in one seamless app."
-      },
-      {
-        icon: Star,
-        title: "Verified Tailors & Boutiques",
-        description: "Access a curated network of trusted professionals for quality and reliability."
-      },
-      {
-        icon: ArrowRight,
-        title: "Smart Booking & Payments",
-        description: "Schedule visits, book services, and pay securely through Groovyn for a hassle-free experience."
-      },
-      {
-        icon: ShoppingBag,
-        title: "Exclusive Offers & Rewards",
-        description: "Unlock app-only discounts, loyalty rewards, and special deals every time you use Groovyn."
-      },
-      {
-        icon: Shirt,
-        title: "Home Delivery & Trials",
-        description: "Enjoy doorstep delivery and trial options for rentals and purchases."
-      },
-      {
-        icon: CheckCircle,
-        title: "Community & Support",
-        description: "Connect with fashion enthusiasts and get 24/7 help from our support team."
-      }
-    ];
-
-    // Mobile-only cards for Our Services section
-    const mobileServices = [
-      {
-        icon: Store,
-        title: "Visit Store",
-        description: "Find and visit partner stores near you for a personalized experience."
-      },
-      {
-        icon: ArrowRight,
-        title: "Pay via App",
-        description: "Get extra discounts when you pay your bill directly from our app."
-      }
-    ];
-                  <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-all duration-500 group-hover:bg-black group-hover:scale-110 group-hover:rotate-12 shadow-lg">
-                    <service.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 transition-transform duration-300 group-hover:scale-110 group-hover:text-indigo-600" />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4 group-hover:text-black transition-colors duration-300">{service.title}</h3>
-                  <div className="space-y-2">
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{service.description}</p>
-                    {(service.title === 'Stitching Services' || service.title === 'Boutiques') && (
-                      <div className="text-xs sm:text-sm text-gray-700">
-                        <span className="inline-block bg-gray-100 border border-gray-200 rounded-full px-3 py-1 mr-2 mb-1">Visit Store Available</span>
-                        <span className="inline-block bg-gray-100 border border-gray-200 rounded-full px-3 py-1 mb-1">Extra discount when you pay via our app</span>
-                      </div>
-                    )}
-                  </div>
-                </CardContent>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-500 transform -skew-x-12 translate-x-full group-hover:translate-x-[-100%]"></div>
-              </Card>
-            ))}
-          </div>
-        </div>
+  </div>
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gray-800 rounded-full opacity-5 animate-pulse delay-1000"></div>
