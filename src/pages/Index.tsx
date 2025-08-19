@@ -179,7 +179,7 @@ export default function GroovynLanding() {
           
           {/* Mobile App Screenshots with 3D Effects */}
           <div className="relative max-w-6xl mx-auto perspective-1000">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-center px-2 sm:px-0">
               <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 h-[180px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto">
                 <div className="text-center group-hover:scale-110 transition-transform duration-500">
                   <ShoppingBag className="h-12 md:h-16 w-12 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
@@ -235,7 +235,7 @@ export default function GroovynLanding() {
             {workflowSteps.map((step, index) => (
               <Card 
                 key={index} 
-                className="border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-110 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white sm:rounded-3xl sm:h-auto sm:w-auto sm:p-8 h-[180px] w-[180px] mx-auto flex flex-col justify-center items-center p-3"
+                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white sm:rounded-3xl sm:h-auto sm:w-auto sm:p-8 h-[220px] w-[170px] mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
                 style={{
                   animationDelay: `${index * 150}ms`
                 }}
@@ -296,7 +296,7 @@ export default function GroovynLanding() {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-110 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white sm:rounded-3xl sm:h-auto sm:w-auto sm:p-8 h-[180px] w-[180px] mx-auto flex flex-col justify-center items-center p-3"
+                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white sm:rounded-3xl sm:h-auto sm:w-auto sm:p-8 h-[220px] w-[170px] mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
                 style={{
                   animationDelay: `${index * 200}ms`
                 }}
