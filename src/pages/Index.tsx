@@ -239,7 +239,7 @@ export default function GroovynLanding() {
             {workflowSteps.map((step, index) => (
               <Card 
                 key={index} 
-                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white sm:rounded-3xl sm:h-auto sm:w-auto sm:p-8 h-[220px] w-[170px] mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
+                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white w-full max-w-xs min-h-[140px] min-w-[140px] h-auto mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
                 style={{
                   animationDelay: `${index * 150}ms`
                 }}
@@ -300,7 +300,7 @@ export default function GroovynLanding() {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white sm:rounded-3xl sm:h-auto sm:w-auto sm:p-8 h-[220px] w-[170px] mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
+                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white w-full max-w-xs min-h-[140px] min-w-[140px] h-auto mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
                 style={{
                   animationDelay: `${index * 200}ms`
                 }}
