@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import '@/styles/animations.css';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -20,8 +21,7 @@ import {
   Apple,
   Play
 } from 'lucide-react';
-
-export default function GroovynLanding() {
+export default function Index() {
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
   const [scrollY, setScrollY] = useState(0);
 
@@ -245,38 +245,76 @@ export default function GroovynLanding() {
               Simple steps to transform your clothing experience
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {workflowSteps.map((step, index) => (
-              <Card 
-                key={index}
-                className={`relative bg-white/30 backdrop-blur-lg border-2 border-transparent group hover:border-indigo-400 shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden mx-auto flex flex-col justify-center items-center p-6 mb-6 h-[240px] w-[200px] md:h-72 md:w-72 animate-bounce-in`}
-                style={{
-                  animationDelay: `${index * 150}ms`
-                }}
-              >
-                <CardContent className="flex flex-col items-center justify-center h-full w-full text-center relative z-10">
-                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-indigo-200/30 via-white/10 to-pink-200/30 rounded-2xl"></div>
-                  <div className="relative z-10 flex flex-col items-center justify-center">
-                    <div className="bg-gradient-to-br from-indigo-400 via-purple-400 to-pink-400 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-lg border-4 border-white/40">
-                      {index === 0 && <Scissors className="h-8 w-8 text-white drop-shadow-lg" />}
-                      {index === 1 && <Store className="h-8 w-8 text-white drop-shadow-lg" />}
-                      {index === 2 && <Shirt className="h-8 w-8 text-white drop-shadow-lg" />}
-                      {index === 3 && <Palette className="h-8 w-8 text-white drop-shadow-lg" />}
-                    </div>
-                    <div className="bg-white/80 text-indigo-700 rounded-full px-4 py-1 mb-3 font-bold text-xs shadow-sm border border-indigo-200">{step.step}</div>
-                    <h3 className="text-xl md:text-2xl font-extrabold mb-2 text-indigo-700 drop-shadow-sm">{step.title}</h3>
-                    <p className="text-gray-900 text-base md:text-lg leading-relaxed font-medium drop-shadow-sm px-2">{step.description}</p>
-                  </div>
-                </CardContent>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-500 transform -skew-x-12 translate-x-full group-hover:translate-x-[-100%]"></div>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+              {workflowSteps.map((step, index) => (
+                <div
+                  key={index}
+                  className="tilt-container"
+                >
+                  <Card
+                    className={`tilt relative bg-white text-black shadow-xl transition-all duration-300 rounded-2xl overflow-hidden mx-auto flex flex-col justify-center items-center p-8 mb-6 h-[280px] w-[270px] sm:w-[270px] md:w-[270px] lg:w-[270px] group hover:scale-105 hover:shadow-2xl animate-fade-up hover:animate-card-float`}
+                    style={{ animationDelay: `${index * 120}ms` }}
+                  >
+                    <CardContent className="flex flex-col items-center justify-center h-full w-full text-center relative z-10">
+                      <div className="relative z-10 flex flex-col items-center justify-center">
+                        <div className="bg-gradient-to-br from-indigo-500 to-pink-500 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-2xl transition-transform duration-300 group-hover:scale-125 group-hover:bg-gradient-to-br group-hover:from-pink-500 group-hover:to-indigo-500">
+                          {index === 0 && <Scissors className="h-8 w-8 text-white drop-shadow-lg transition-colors duration-300 group-hover:text-pink-300" />}
+                          {index === 1 && <Store className="h-8 w-8 text-white drop-shadow-lg transition-colors duration-300 group-hover:text-pink-300" />}
+                          {index === 2 && <Shirt className="h-8 w-8 text-white drop-shadow-lg transition-colors duration-300 group-hover:text-pink-300" />}
+                          {index === 3 && <Palette className="h-8 w-8 text-white drop-shadow-lg transition-colors duration-300 group-hover:text-pink-300" />}
+                        </div>
+                        <div className="bg-black/5 text-indigo-700 rounded-full px-4 py-1 mb-3 font-semibold text-xs shadow-sm">{step.step}</div>
+                        <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 text-black drop-shadow-sm break-words text-center group-hover:text-pink-600 transition-colors duration-300">{step.title}</h3>
+                        <p className="text-gray-700 text-sm md:text-base leading-tight font-medium drop-shadow-sm px-2 break-words text-center whitespace-normal group-hover:text-indigo-700 transition-colors duration-300" style={{wordBreak: 'break-word'}}>{step.description}</p>
+                      </div>
+                    </CardContent>
+                    <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent via-black/5 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                  </Card>
+                </div>
+              ))}
           </div>
   </div>
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gray-800 rounded-full opacity-5 animate-pulse delay-1000"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gray-700 rounded-full opacity-5 animate-pulse"></div>
+        </div>
+      </section>
+      {/* Our Services Section (third, white) */}
+      <section 
+        id="services"
+        data-animate
+        className={`py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-white via-gray-50 to-white text-black transition-all duration-1500 ${
+          isVisible['services'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+        }`}
+      >
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 transform transition-all duration-1000 hover:scale-105">Our Services</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need for custom clothing, all in one place
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 px-4">
+            {services.map((service, idx) => (
+              <Card
+                key={service.title}
+                className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 p-6 flex flex-col items-center text-center h-full w-full sm:w-full lg:w-auto"
+                style={{ animationDelay: `${idx * 100}ms` }}
+              >
+                <CardContent className="p-0 flex flex-col items-center gap-4">
+                  <div className="relative w-18 h-18 mb-2">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-100 to-pink-100 opacity-70 transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 blur-sm"></div>
+                    <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-white p-2 shadow-md transition-transform duration-300 group-hover:-translate-y-2">
+                      <service.icon className="w-8 h-8 text-indigo-600 group-hover:text-pink-500 transition-transform duration-300" />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 group-hover:text-pink-600 transition-colors duration-300">{service.title}</h3>
+                  <p className="text-gray-600 text-sm mt-1 group-hover:text-indigo-700 transition-colors duration-300">{service.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
