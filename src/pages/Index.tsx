@@ -258,15 +258,11 @@ export default function GroovynLanding() {
                   <div className="space-y-2">
                     <p className="text-gray-800 text-sm sm:text-base leading-relaxed group-hover:text-black transition-colors duration-300">{step.description}</p>
                     {(step.title === 'Book a Tailor' || step.title === 'Shop Boutiques') && (
-                      <div className="flex flex-row flex-wrap justify-center gap-2 mt-3">
-                        <div className="flex items-center bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm text-gray-800 font-semibold text-xs sm:text-sm gap-2">
-                          <span className="text-lg">🏬</span>
-                          <span>Visit Store Available</span>
-                        </div>
-                        <div className="flex items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm font-semibold text-xs sm:text-sm gap-2">
-                          <span className="text-lg">💸</span>
-                          <span>Extra discount when you pay via our app</span>
-                        </div>
+                      <div className="bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm text-gray-800 font-semibold text-xs sm:text-sm mt-3 w-full sm:w-auto">
+                        <ul className="list-disc pl-4">
+                          <li>Visit Store Available</li>
+                          <li>Extra discount when you pay via our app</li>
+                        </ul>
                       </div>
                     )}
                   </div>
