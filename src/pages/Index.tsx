@@ -180,30 +180,34 @@ export default function GroovynLanding() {
           {/* Mobile App Screenshots with 3D Effects */}
           <div className="relative max-w-6xl mx-auto perspective-1000">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-center px-2 sm:px-0">
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 h-[180px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto">
-                <div className="text-center group-hover:scale-110 transition-transform duration-500">
-                  <ShoppingBag className="h-12 md:h-16 w-12 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
-                  <p className="text-gray-600 font-medium group-hover:text-black transition-colors duration-300">Browse & Shop</p>
+              {[{
+                icon: ShoppingBag,
+                label: "Browse & Shop",
+                bg: "from-gray-100 to-gray-200"
+              }, {
+                icon: Scissors,
+                label: "Custom Tailoring",
+                bg: "from-gray-200 to-gray-300"
+              }, {
+                icon: Shirt,
+                label: "Rent & Try",
+                bg: "from-gray-100 to-gray-200"
+              }, {
+                icon: Palette,
+                label: "Fabric",
+                bg: "from-gray-200 to-gray-300"
+              }].map((card, idx) => (
+                <div
+                  key={card.label}
+                  className={`bg-gradient-to-br ${card.bg} rounded-3xl p-6 h-[260px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto animate-drop-in`}
+                  style={{ animationDelay: `${idx * 0.18}s` }}
+                >
+                  <div className="text-center group-hover:scale-110 transition-transform duration-500">
+                    <card.icon className="h-14 md:h-16 w-14 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
+                    <p className="text-gray-700 font-bold group-hover:text-black transition-colors duration-300 text-base md:text-lg break-words whitespace-normal leading-tight px-2">{card.label}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl p-6 h-[180px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child relative z-10 mx-auto">
-                <div className="text-center group-hover:scale-110 transition-transform duration-500">
-                  <Scissors className="h-12 md:h-16 w-12 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
-                  <p className="text-gray-700 font-semibold group-hover:text-black transition-colors duration-300">Custom Tailoring</p>
-                </div>
-              </div>
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 h-[180px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto">
-                <div className="text-center group-hover:scale-110 transition-transform duration-500">
-                  <Shirt className="h-12 md:h-16 w-12 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
-                  <p className="text-gray-600 font-medium group-hover:text-black transition-colors duration-300">Rent & Try</p>
-                </div>
-              </div>
-              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl p-6 h-[180px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto">
-                <div className="text-center group-hover:scale-110 transition-transform duration-500">
-                  <Palette className="h-12 md:h-16 w-12 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
-                  <p className="text-gray-600 font-medium group-hover:text-black transition-colors duration-300">Fabric</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
