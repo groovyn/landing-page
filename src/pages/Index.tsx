@@ -199,7 +199,7 @@ export default function GroovynLanding() {
               }].map((card, idx) => (
                 <div
                   key={card.label}
-                  className={`bg-gradient-to-br ${card.bg} rounded-3xl p-6 h-[260px] w-[90vw] max-w-xs md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto animate-drop-in animate-float mb-4`}
+                  className={`bg-gradient-to-br ${card.bg} rounded-3xl p-6 h-[220px] w-[160px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto animate-drop-in animate-float mb-4`}
                   style={{ animationDelay: `${idx * 0.18}s` }}
                 >
                   <div className="text-center group-hover:scale-110 transition-transform duration-500">
@@ -239,7 +239,7 @@ export default function GroovynLanding() {
             {workflowSteps.map((step, index) => (
               <Card 
                 key={index} 
-                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white w-[90vw] max-w-sm min-h-[140px] min-w-[140px] h-auto mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
+                className={`border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 group perspective-child bg-gradient-to-br from-white via-gray-100 to-gray-50 overflow-hidden relative rounded-3xl hover:border-black hover:bg-gradient-to-tr hover:from-gray-50 hover:via-gray-200 hover:to-white w-[160px] min-h-[140px] min-w-[140px] h-auto mx-auto flex flex-col justify-center items-center p-4 mb-4 animate-bounce-in`}
                 style={{
                   animationDelay: `${index * 150}ms`
                 }}
