@@ -179,28 +179,28 @@ export default function GroovynLanding() {
           
           {/* Mobile App Screenshots with 3D Effects */}
           <div className="relative max-w-6xl mx-auto perspective-1000">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-center">
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 sm:p-8 h-[180px] w-[180px] sm:h-64 sm:w-auto flex items-center justify-center shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-3xl group perspective-child mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-center">
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 h-[180px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto">
                 <div className="text-center group-hover:scale-110 transition-transform duration-500">
-                  <ShoppingBag className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
+                  <ShoppingBag className="h-12 md:h-16 w-12 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
                   <p className="text-gray-600 font-medium group-hover:text-black transition-colors duration-300">Browse & Shop</p>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl p-6 sm:p-8 h-[180px] w-[180px] sm:h-64 sm:w-auto flex items-center justify-center shadow-2xl transform md:scale-110 transition-all duration-700 hover:scale-125 hover:rotate-y-12 hover:shadow-3xl group perspective-child relative z-10 mx-auto">
+              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl p-6 h-[180px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child relative z-10 mx-auto">
                 <div className="text-center group-hover:scale-110 transition-transform duration-500">
-                  <Scissors className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
+                  <Scissors className="h-12 md:h-16 w-12 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
                   <p className="text-gray-700 font-semibold group-hover:text-black transition-colors duration-300">Custom Tailoring</p>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 sm:p-8 h-[180px] w-[180px] sm:h-64 sm:w-auto flex items-center justify-center shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-3xl group perspective-child mx-auto">
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-6 h-[180px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto">
                 <div className="text-center group-hover:scale-110 transition-transform duration-500">
-                  <Shirt className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
+                  <Shirt className="h-12 md:h-16 w-12 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
                   <p className="text-gray-600 font-medium group-hover:text-black transition-colors duration-300">Rent & Try</p>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl p-6 sm:p-8 h-[180px] w-[180px] sm:h-64 sm:w-auto flex items-center justify-center shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-3xl group perspective-child mx-auto">
+              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl p-6 h-[180px] w-[180px] md:h-64 md:w-64 flex items-center justify-center shadow-3xl transform transition-all duration-700 hover:scale-105 hover:rotate-y-12 hover:shadow-4xl group perspective-child mx-auto">
                 <div className="text-center group-hover:scale-110 transition-transform duration-500">
-                  <Palette className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
+                  <Palette className="h-12 md:h-16 w-12 md:w-16 mx-auto mb-4 text-gray-600 group-hover:text-black transition-colors duration-300" />
                   <p className="text-gray-600 font-medium group-hover:text-black transition-colors duration-300">Fabric</p>
                 </div>
               </div>
@@ -254,13 +254,15 @@ export default function GroovynLanding() {
                   <div className="space-y-2">
                     <p className="text-gray-800 text-sm sm:text-base leading-relaxed group-hover:text-black transition-colors duration-300">{step.description}</p>
                     {(step.title === 'Book a Tailor' || step.title === 'Shop Boutiques') && (
-                      <div className="flex flex-col items-center gap-2 mt-2 sm:gap-1 sm:mt-1">
-                        <span className="inline-block bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white border border-gray-600 rounded-full px-4 py-1 font-semibold text-xs shadow-md tracking-wide sm:bg-gray-100 sm:text-gray-800 sm:border-gray-200 sm:rounded sm:px-2 sm:py-0 sm:font-normal">
-                          <span className="mr-2">🏬</span> Visit Store Available
-                        </span>
-                        <span className="inline-block bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 text-white border border-gray-600 rounded-full px-4 py-1 font-semibold text-xs shadow-md tracking-wide sm:bg-gray-100 sm:text-gray-800 sm:border-gray-200 sm:rounded sm:px-2 sm:py-0 sm:font-normal">
-                          <span className="mr-2">💸</span> Extra discount when you pay via our app
-                        </span>
+                      <div className="flex flex-row flex-wrap justify-center gap-2 mt-3">
+                        <div className="flex items-center bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm text-gray-800 font-semibold text-xs sm:text-sm gap-2">
+                          <span className="text-lg">🏬</span>
+                          <span>Visit Store Available</span>
+                        </div>
+                        <div className="flex items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm font-semibold text-xs sm:text-sm gap-2">
+                          <span className="text-lg">💸</span>
+                          <span>Extra discount when you pay via our app</span>
+                        </div>
                       </div>
                     )}
                   </div>
